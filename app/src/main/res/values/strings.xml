@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">BIZZPHIX</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="we_will_send_you_an_one_time_otp_on_this_given_mobile_number">We will send you an one time otp on this given mobile number</string>
+    <string name="enter_mobile_number">enter_mobile_number</string>
+    <string name="_7742789411">7742789411</string>
+    <string name="get_otp">Get OTP</string>
+</resources>

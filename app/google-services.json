@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "317708180945",
+    "project_id": "bizzphix-b5b32",
+    "storage_bucket": "bizzphix-b5b32.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:317708180945:android:724f1edf67e2d9358bd4f0",
+        "android_client_info": {
+          "package_name": "com.example.bizzphix"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "317708180945-dpvouabdhs97g92akkauj6kqkr1b03do.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDh_n0aBUXFtUVTufkGOSd9b84kIoAmDAA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "317708180945-dpvouabdhs97g92akkauj6kqkr1b03do.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

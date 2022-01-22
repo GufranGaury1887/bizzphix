@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/bn_calender"
+        android:title="Calender"
+        android:icon="@drawable/gufran_arihant_calender"/>
+
+    <item
+        android:id="@+id/bn_birthday"
+        android:title="Business"
+        android:icon="@drawable/gufran_arihant_business"/>
+
+    <item
+        android:id="@+id/bn_marriage"
+        android:title="General"
+        android:icon="@drawable/gufran_arihant_general"/>
+
+
+    <item
+        android:id="@+id/bn_custom"
+        android:title="Custom"
+        android:icon="@drawable/gufran_arihant_custom"/>
+
+
+    <item
+        android:id="@+id/bn_soon"
+        android:title="Soon"
+        android:icon="@drawable/gufran_arihant_soon"/>
+
+
+
+
+</menu>
