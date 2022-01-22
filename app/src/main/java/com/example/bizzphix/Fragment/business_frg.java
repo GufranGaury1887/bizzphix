@@ -9,8 +9,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.bizzphix.Fragment_business.Education;
 import com.example.bizzphix.Fragment_business.Grocery;
 import com.example.bizzphix.Fragment_business.Health;
+import com.example.bizzphix.Fragment_business.Taxtile;
+import com.example.bizzphix.Fragment_business.coming1;
+import com.example.bizzphix.Fragment_business.coming2;
+import com.example.bizzphix.Fragment_business.coming3;
 import com.example.bizzphix.R;
 import com.example.bizzphix.ViewpagerAdapter;
 import com.google.android.material.tabs.TabLayout;
@@ -38,11 +43,11 @@ public class business_frg extends Fragment{
         ViewpagerAdapter adapter = new ViewpagerAdapter(getChildFragmentManager());
         adapter.addFragment(new Grocery(),"Grocery");
         adapter.addFragment(new Health(),"Health");
-        adapter.addFragment(new Health(),"Education");
-        adapter.addFragment(new Health(),"Textile");
-        adapter.addFragment(new Health(),"coming 1");
-        adapter.addFragment(new Health(),"coming 2");
-        adapter.addFragment(new Health(),"coming 3");
+        adapter.addFragment(new Education(),"Education");
+        adapter.addFragment(new Taxtile(),"Textile");
+        adapter.addFragment(new coming1(),"coming 1");
+        adapter.addFragment(new coming2(),"coming 2");
+        adapter.addFragment(new coming3(),"coming 3");
         viewPager.setAdapter(adapter);
         tabLayout.setupWithViewPager(viewPager);
     }
