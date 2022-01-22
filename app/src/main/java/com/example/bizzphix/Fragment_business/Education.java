@@ -33,6 +33,7 @@ public class Education extends Fragment {
         eRecyclerview = view.findViewById(R.id.erecyclerview);
         eRecyclerview.setHasFixedSize(true);
 
+
         eRecyclerview.setLayoutManager(new LinearLayoutManager(getContext()));
 
         firebaseDatabase = FirebaseDatabase.getInstance();
