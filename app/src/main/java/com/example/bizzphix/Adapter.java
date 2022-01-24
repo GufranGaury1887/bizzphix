@@ -58,9 +58,10 @@ public class Adapter extends FirebaseRecyclerAdapter<Member, Adapter.ViewHolder>
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(MainActivity.this,ClickeditemActivity.class);
+                Intent intent = new Intent(context,ClickeditemActivity.class);
+                intent.putExtra("urlToImage",model.getImage());
+                context.startActivity(intent);
 
-//                Toast.makeText(context, "click", Toast.LENGTH_SHORT).show();
             }
         });
 
