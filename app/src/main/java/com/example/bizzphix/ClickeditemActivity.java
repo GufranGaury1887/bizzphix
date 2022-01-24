@@ -20,7 +20,7 @@ public class ClickeditemActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_clickeditem);
 
-        imageView = imageView.findViewById(R.id.clickview);
+        imageView =findViewById(R.id.clickview);
 
         Intent intent = getIntent();
         String url = intent.getStringExtra("urlToImage");
