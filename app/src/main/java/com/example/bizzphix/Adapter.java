@@ -35,6 +35,7 @@ public class Adapter extends FirebaseRecyclerAdapter<Member, Adapter.ViewHolder>
 
     @Override
     protected void onBindViewHolder(@NonNull ViewHolder holder, int position, @NonNull Member model) {
+
         holder.mtitletv.setText(model.getTitle());
 
         try {

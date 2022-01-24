@@ -34,6 +34,8 @@ public class Grocery extends Fragment {
         gRecyclerview = view.findViewById(R.id.grecyclerview);
         gRecyclerview.setHasFixedSize(true);
 
+
+
         gRecyclerview.setLayoutManager(new LinearLayoutManager(getContext()));
 
         firebaseDatabase = FirebaseDatabase.getInstance();
@@ -46,6 +48,9 @@ public class Grocery extends Fragment {
 
         adapter = new Adapter(options,getContext());
         gRecyclerview.setAdapter(adapter);
+
+        gRecyclerview.getRecycledViewPool().clear();
+        adapter.notifyDataSetChanged();
 
         return view;
 
