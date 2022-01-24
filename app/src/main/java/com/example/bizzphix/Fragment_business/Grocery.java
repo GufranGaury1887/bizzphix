@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -35,8 +36,9 @@ public class Grocery extends Fragment {
         gRecyclerview.setHasFixedSize(true);
 
 
-
-        gRecyclerview.setLayoutManager(new LinearLayoutManager(getContext()));
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
+        linearLayoutManager.removeAllViews();
+        gRecyclerview.setLayoutManager(linearLayoutManager);
 
         firebaseDatabase = FirebaseDatabase.getInstance();
         reference = firebaseDatabase.getReference("Grocery");
