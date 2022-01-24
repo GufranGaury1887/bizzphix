@@ -1,6 +1,7 @@
 package com.example.bizzphix;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,6 +9,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -15,9 +17,14 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.firebase.firestore.auth.User;
 import com.squareup.picasso.Picasso;
 
+import java.util.ArrayList;
+
 public class Adapter extends FirebaseRecyclerAdapter<Member, Adapter.ViewHolder> {
+
+
 
     Context context;
 
@@ -47,6 +54,16 @@ public class Adapter extends FirebaseRecyclerAdapter<Member, Adapter.ViewHolder>
 
         Animation animation = AnimationUtils.loadAnimation(context, android.R.anim.slide_in_left);
         holder.view.startAnimation(animation);
+        holder.mImagetv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(MainActivity.this,ClickeditemActivity.class);
+
+//                Toast.makeText(context, "click", Toast.LENGTH_SHORT).show();
+            }
+        });
+
     }
 
     @NonNull
@@ -58,7 +75,7 @@ public class Adapter extends FirebaseRecyclerAdapter<Member, Adapter.ViewHolder>
         return new ViewHolder(view);
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public class ViewHolder extends RecyclerView.ViewHolder{
 
         ImageView mImagetv;
         TextView mtitletv;
@@ -71,9 +88,20 @@ public class Adapter extends FirebaseRecyclerAdapter<Member, Adapter.ViewHolder>
             view = itemView;
             mtitletv = itemView.findViewById(R.id.rTitleView);
             mImagetv = itemView.findViewById(R.id.rImageView);
+//            itemView.setOnClickListener((this));
 
         }
+
+
+//        @Override
+//        public void onClick(View view) {
+//            int position = getAbsoluteAdapterPosition();
+//            Toast.makeText(context, "position"+position, Toast.LENGTH_SHORT).show();
+//            Intent intent = new Intent(context,ClickeditemActivity.class);
+//            context.startActivity(intent);
+//        }
     }
+
 
 
 }

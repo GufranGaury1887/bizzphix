@@ -10,9 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.bizzphix.Adapter;
-import com.example.bizzphix.Adapter1;
 import com.example.bizzphix.Member;
-import com.example.bizzphix.Member_h;
 import com.example.bizzphix.R;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.DatabaseReference;
@@ -32,7 +30,7 @@ public class Health extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_health, null);
 
-        hRecyclerview = view.findViewById(R.id.health_recycler);
+        hRecyclerview = view.findViewById(R.id.hrecyclerview);
         hRecyclerview.setHasFixedSize(true);
 
         hRecyclerview.setLayoutManager(new LinearLayoutManager(getContext()));

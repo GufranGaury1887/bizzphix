@@ -28,16 +28,15 @@ public class Education extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_education,null);
+
         eRecyclerview = view.findViewById(R.id.erecyclerview);
         eRecyclerview.setHasFixedSize(true);
-
 
         eRecyclerview.setLayoutManager(new LinearLayoutManager(getContext()));
 
         firebaseDatabase = FirebaseDatabase.getInstance();
-        reference = firebaseDatabase.getReference("Education");
+        reference = firebaseDatabase.getReference("EDU");
 
         FirebaseRecyclerOptions<Member> options =
                 new FirebaseRecyclerOptions.Builder<Member>()

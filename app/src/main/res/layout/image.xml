@@ -18,8 +18,8 @@
 
     <ImageView
         android:id="@+id/rImageView"
-        android:layout_width="180dp"
-        android:layout_height="150dp"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
         android:scaleType="centerCrop"
         tools:src="@drawable/ic_launcher_background"
         android:adjustViewBounds="true"
@@ -27,8 +27,8 @@
     <TextView
         android:textAlignment="center"
         android:id="@+id/rTitleView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:text="Title"
         android:paddingLeft="10dp"
         android:textColor="@color/black"

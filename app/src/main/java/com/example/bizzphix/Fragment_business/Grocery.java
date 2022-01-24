@@ -21,7 +21,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class Grocery extends Fragment {
 
-    RecyclerView mRecyclerview;
+    RecyclerView gRecyclerview;
     FirebaseDatabase firebaseDatabase;
     DatabaseReference reference;
     Adapter adapter;
@@ -31,10 +31,10 @@ public class Grocery extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_grocery, null);
 
-        mRecyclerview = view.findViewById(R.id.recyclerview);
-        mRecyclerview.setHasFixedSize(true);
+        gRecyclerview = view.findViewById(R.id.grecyclerview);
+        gRecyclerview.setHasFixedSize(true);
 
-        mRecyclerview.setLayoutManager(new LinearLayoutManager(getContext()));
+        gRecyclerview.setLayoutManager(new LinearLayoutManager(getContext()));
 
         firebaseDatabase = FirebaseDatabase.getInstance();
         reference = firebaseDatabase.getReference("Grocery");
@@ -45,7 +45,7 @@ public class Grocery extends Fragment {
                         .build();
 
         adapter = new Adapter(options,getContext());
-        mRecyclerview.setAdapter(adapter);
+        gRecyclerview.setAdapter(adapter);
 
         return view;
 
