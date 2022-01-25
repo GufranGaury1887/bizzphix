@@ -1,13 +1,11 @@
 package com.example.bizzphix.Fragment_business;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -30,6 +28,8 @@ public class Grocery extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        Log.d("atif", "onCreateView");
+
         View view = inflater.inflate(R.layout.fragment_grocery, null);
 
         gRecyclerview = view.findViewById(R.id.grecyclerview);
@@ -43,16 +43,8 @@ public class Grocery extends Fragment {
         firebaseDatabase = FirebaseDatabase.getInstance();
         reference = firebaseDatabase.getReference("Grocery");
 
-        FirebaseRecyclerOptions<Member> options =
-                new FirebaseRecyclerOptions.Builder<Member>()
-                        .setQuery(reference, Member.class)
-                        .build();
 
-        adapter = new Adapter(options,getContext());
-        gRecyclerview.setAdapter(adapter);
 
-        gRecyclerview.getRecycledViewPool().clear();
-        adapter.notifyDataSetChanged();
 
         return view;
 
@@ -61,13 +53,28 @@ public class Grocery extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
+        Log.d("atif", "onstart");
+
+
+
+        FirebaseRecyclerOptions<Member> options =
+                new FirebaseRecyclerOptions.Builder<Member>()
+                        .setQuery(reference, Member.class)
+                        .build();
+
+
+        adapter = new Adapter(options, getContext());
+        adapter.notifyDataSetChanged();
+        gRecyclerview.setAdapter(adapter);
+
         adapter.startListening();
     }
 
     @Override
-    public void onStop()
-    {
+    public void onStop() {
         super.onStop();
         adapter.stopListening();
+
+        Log.d("atif", "onStop");
     }
 }
