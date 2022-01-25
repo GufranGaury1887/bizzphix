@@ -7,8 +7,10 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import com.example.bizzphix.Adapter;
 import com.example.bizzphix.Member;
@@ -36,7 +38,7 @@ public class Grocery extends Fragment {
         gRecyclerview.setHasFixedSize(true);
 
 
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
+        StaggeredGridLayoutManager linearLayoutManager = new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL);
         linearLayoutManager.removeAllViews();
         gRecyclerview.setLayoutManager(linearLayoutManager);
 
