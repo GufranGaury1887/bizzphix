@@ -9,12 +9,10 @@
     tools:context=".Fragment_business.Health">
 
 
-<androidx.recyclerview.widget.RecyclerView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:id="@+id/hrecyclerview"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/hrecyclerview"/>
 
 
-
-
-    </LinearLayout>
+</LinearLayout>

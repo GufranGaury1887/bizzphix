@@ -30,7 +30,7 @@ public class Grocery extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        Log.d("atif", "onCreateView");
+        Log.d("gufran", "onCreateView");
 
         View view = inflater.inflate(R.layout.fragment_grocery, null);
 
@@ -38,7 +38,7 @@ public class Grocery extends Fragment {
         gRecyclerview.setHasFixedSize(true);
 
 
-        StaggeredGridLayoutManager linearLayoutManager = new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL);
+        StaggeredGridLayoutManager linearLayoutManager = new StaggeredGridLayoutManager(3,StaggeredGridLayoutManager.VERTICAL);
         linearLayoutManager.removeAllViews();
         gRecyclerview.setLayoutManager(linearLayoutManager);
 
@@ -55,7 +55,7 @@ public class Grocery extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
-        Log.d("atif", "onstart");
+        Log.d("gufran", "onstart");
 
 
 
@@ -77,6 +77,6 @@ public class Grocery extends Fragment {
         super.onStop();
         adapter.stopListening();
 
-        Log.d("atif", "onStop");
+        Log.d("gufran", "onStop");
     }
 }

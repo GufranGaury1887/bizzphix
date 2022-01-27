@@ -5,7 +5,9 @@ import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,23 +30,23 @@ public class Anniversary extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        Log.d("gufran", "onCreateView");
+
         View view = inflater.inflate(R.layout.fragment_anniversary, null);
 
         anRecyclerview = view.findViewById(R.id.anrecyclerview);
         anRecyclerview.setHasFixedSize(true);
 
-        anRecyclerview.setLayoutManager(new LinearLayoutManager(getContext()));
+
+        StaggeredGridLayoutManager linearLayoutManager = new StaggeredGridLayoutManager(3,StaggeredGridLayoutManager.VERTICAL);
+        linearLayoutManager.removeAllViews();
+        anRecyclerview.setLayoutManager(linearLayoutManager);
 
         firebaseDatabase = FirebaseDatabase.getInstance();
         reference = firebaseDatabase.getReference("Anniversary");
 
-        FirebaseRecyclerOptions<Member> options =
-                new FirebaseRecyclerOptions.Builder<Member>()
-                        .setQuery(reference, Member.class)
-                        .build();
 
-        adapter = new Adapter(options,getContext());
-        anRecyclerview.setAdapter(adapter);
+
 
         return view;
 
@@ -53,13 +55,28 @@ public class Anniversary extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
+        Log.d("gufran", "onstart");
+
+
+
+        FirebaseRecyclerOptions<Member> options =
+                new FirebaseRecyclerOptions.Builder<Member>()
+                        .setQuery(reference, Member.class)
+                        .build();
+
+
+        adapter = new Adapter(options, getContext());
+        adapter.notifyDataSetChanged();
+        anRecyclerview.setAdapter(adapter);
+
         adapter.startListening();
     }
 
     @Override
-    public void onStop()
-    {
+    public void onStop() {
         super.onStop();
         adapter.stopListening();
+
+        Log.d("gufran", "onStop");
     }
 }

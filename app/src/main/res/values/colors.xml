@@ -12,8 +12,11 @@
     <color name="colorPrimary">#FFC107</color>
     <color name="colorPrimaryDARK">#FFC107</color>
     <color name="ColorAccent">#FF5722</color>
+    <color name="colortextfirst1">#1C1919</color>
+
     <color name="colortextfirst2">#777474</color>
+
     <color name="color_view">#A5A2A2</color>
-    <color name="colortextfirst1">#FF000000</color>
+
 
 </resources>

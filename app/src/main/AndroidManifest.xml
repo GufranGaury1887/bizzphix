@@ -13,8 +13,7 @@
         android:theme="@style/Theme.BIZZPHIX">
         <activity
             android:name=".ClickeditemActivity"
-            android:exported="false" />
-        <!-- <activity -->
+            android:exported="false" /> <!-- <activity -->
         <!-- android:name=".Otp_verification_2" -->
         <!-- android:exported="false" /> -->
         <!-- <activity -->
