@@ -5,10 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.WindowManager;
 
+import com.dsphotoeditor.sdk.activity.DsPhotoEditorActivity;
+import com.dsphotoeditor.sdk.utils.DsPhotoEditorConstants;
 import com.example.bizzphix.Fragment.custom_frg;
 import com.example.bizzphix.Fragment.Calender_frg;
 import com.example.bizzphix.Fragment.business_frg;
@@ -39,9 +42,6 @@ public class MainActivity extends AppCompatActivity
 
         bottomNavigationView = findViewById(R.id.bottom_navigaion);
         bottomNavigationView.setOnNavigationItemSelectedListener(navigationItemSelectedListener);
-
-
-
 
     }
 
