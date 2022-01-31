@@ -1,17 +1,19 @@
 package com.example.bizzphix;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.WindowManager;
+import android.widget.TextView;
 
-import com.dsphotoeditor.sdk.activity.DsPhotoEditorActivity;
-import com.dsphotoeditor.sdk.utils.DsPhotoEditorConstants;
 import com.example.bizzphix.Fragment.custom_frg;
 import com.example.bizzphix.Fragment.Calender_frg;
 import com.example.bizzphix.Fragment.business_frg;
@@ -19,10 +21,15 @@ import com.example.bizzphix.Fragment.general_frg;
 import com.example.bizzphix.Fragment.soon_frg;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import java.time.LocalDate;
+
 public class MainActivity extends AppCompatActivity
 {
 
     BottomNavigationView bottomNavigationView;
+    private LocalDate selectedDate;
+    private TextView monthYearText;
+
 
 
     @Override
@@ -82,4 +89,6 @@ public class MainActivity extends AppCompatActivity
             return true;
         }
     };
+
+
 }

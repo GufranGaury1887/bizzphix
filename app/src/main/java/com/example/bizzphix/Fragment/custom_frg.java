@@ -24,9 +24,9 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+
 import com.dsphotoeditor.sdk.activity.DsPhotoEditorActivity;
 import com.dsphotoeditor.sdk.utils.DsPhotoEditorConstants;
-import com.example.bizzphix.MainActivity;
 import com.example.bizzphix.R;
 import com.example.bizzphix.ResultActivity;
 import com.google.android.material.snackbar.Snackbar;
@@ -36,12 +36,11 @@ import java.util.Objects;
 
 
 public class custom_frg extends Fragment {
-    int IMAGE_REQUEST_CODE = 45;
+        int IMAGE_REQUEST_CODE = 45;
     int CAMERA_REQUEST_CODE = 14;
     int RESULT_CODE = 200;
     ImageView editBtn,cameraBtn;
-
-    @Override
+@Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment

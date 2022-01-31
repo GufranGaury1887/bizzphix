@@ -3,13 +3,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Fragment_business.coming3">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <Button
+        android:id="@+id/logout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="coming3"
-        android:gravity="center"/>
-
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:text="log out"
+        android:textColor="@color/colortextfirst1"
+        android:textStyle="bold"
+        android:background ="@drawable/button2"/>
 </FrameLayout>

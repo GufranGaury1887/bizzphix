@@ -18,12 +18,13 @@
         android:theme="@style/Theme.BIZZPHIX">
         <activity
             android:name=".ClickeditemActivity"
-            android:exported="false" /> <!-- <activity -->
-        <!-- android:name=".Otp_verification_2" -->
-        <!-- android:exported="false" /> -->
-        <!-- <activity -->
-        <!-- android:name=".Otp_verification_1" -->
-        <!-- android:exported="false" /> -->
+            android:exported="false" />
+<!--        <activity-->
+<!--         android:name=".Otp_verification_2"-->
+<!--         android:exported="false" />-->
+<!--         <activity-->
+<!--         android:name=".Otp_verification_1"-->
+<!--         android:exported="false" />-->
         <activity
             android:name=".Splash_screen"
             android:exported="true">
@@ -72,11 +73,13 @@
             android:theme="@android:style/Theme.Holo.NoActionBar" />
 
         <activity
+
             android:name="com.dsphotoeditor.sdk.activity.DsPhotoEditorDrawActivity"
 
             android:screenOrientation="portrait"
 
             android:theme="@android:style/Theme.Holo.NoActionBar" />
+
     </application>
 
 </manifest>
